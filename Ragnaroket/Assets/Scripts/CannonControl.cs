@@ -13,9 +13,10 @@ public class CannonControl : MonoBehaviour {
 		crosshair.position = new Vector2 (Input.mousePosition.x / Screen.width, Input.mousePosition.y / Screen.height);
 
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-		transform.LookAt(ray.GetPoint(100));
+		laser[0].transform.LookAt(ray.GetPoint(100));
+		laser[1].transform.LookAt(ray.GetPoint(100));
 			//fire lasers
-			if (Input.GetKeyDown(KeyCode.A))
+			if (Input.GetMouseButtonDown(0))
 			{
 				laser[0].Emit(1);
 				laser[1].Emit(1);

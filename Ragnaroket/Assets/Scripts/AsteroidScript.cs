@@ -13,7 +13,7 @@ public class AsteroidScript : MonoBehaviour {
 			gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
 			gameObject.GetComponentInChildren<MeshCollider>().enabled = false;
 			asteroidParts.Emit(30);
-			Destroy(gameObject, 5);
+			Destroy(gameObject, 30);
 		}
 	}
 }
