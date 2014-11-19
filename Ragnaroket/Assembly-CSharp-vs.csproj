@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\AsteroidField.cs" />
      <Compile Include="Assets\Scripts\AsteroidScript.cs" />
      <Compile Include="Assets\Scripts\CannonControl.cs" />
+     <Compile Include="Assets\Scripts\GUIResize.cs" />
      <Compile Include="Assets\Scripts\ShipMovement.cs" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
