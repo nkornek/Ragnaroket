@@ -1,12 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ShipMovement.cs">
-    <Files>
-      <File FileName="Assets\Scripts\AsteroidScript.cs" Line="14" Column="41" />
-      <File FileName="Assets\Scripts\CannonControl.cs" Line="13" Column="42" />
-      <File FileName="Assets\Scripts\ShipMovement.cs" Line="43" Column="5" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

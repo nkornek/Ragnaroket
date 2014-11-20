@@ -23,6 +23,7 @@ public class AsteroidField : MonoBehaviour {
 					                          Quaternion.Euler(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360))) as GameObject;
 					newAsteroid.rigidbody.AddForce(new Vector3(Random.Range(-asteroidForce, asteroidForce), Random.Range(-asteroidForce, asteroidForce), Random.Range(-asteroidForce, asteroidForce)));
 					newAsteroid.rigidbody.angularVelocity = Random.insideUnitSphere/asteroidForce;
+					newAsteroid.transform.parent = transform;
 				}
 			}
 		}
