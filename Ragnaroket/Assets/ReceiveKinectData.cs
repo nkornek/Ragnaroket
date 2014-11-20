@@ -6,9 +6,13 @@ public class ReceiveKinectData : MonoBehaviour {
 	public ZigEngageSingleUser userEngage;
 	public ShipMovement ship;
 
+	//accel stuff
 	public float threshholdKneeLift, threshholdKneeSide, threshholdFootOut;
-
 	bool kneeUp, footOut;
+
+	//steer stuff
+	public float steerZ;
+	public float steerX;
 
 	// Use this for initialization
 	void Start () {
@@ -31,6 +35,17 @@ public class ReceiveKinectData : MonoBehaviour {
 				float footDist = vikingSkele.LeftFoot.localPosition.x - vikingSkele.LeftKnee.localPosition.x;
 				footDist = Mathf.Abs(footDist);
 				ship.speedMult = footDist;
+			}
+
+
+			//steering control
+			//will later swap out for player 2
+			if (!ship.accelerating)
+			{
+				steerX = vikingSkele.Torso.localRotation.x * 3;
+				steerZ = vikingSkele.Torso.localRotation.z * 3;
+				ship.turnX = steerX;
+				ship.turnZ = steerZ;
 			}
 		}
 	}
