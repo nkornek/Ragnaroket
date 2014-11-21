@@ -54,11 +54,11 @@
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
- <Reference Include="ZDK">
- <HintPath>C:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Assets/ZigFu/Scripts/_Internal/ZDK.dll</HintPath>
- </Reference>
  <Reference Include="OpenNI.Net">
  <HintPath>C:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Assets/ZigFu/Scripts/_Internal/OpenNI.Net.dll</HintPath>
+ </Reference>
+ <Reference Include="ZDK">
+ <HintPath>C:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Assets/ZigFu/Scripts/_Internal/ZDK.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

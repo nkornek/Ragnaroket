@@ -55,14 +55,14 @@
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>C:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.Graphs">
- <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ <Reference Include="OpenNI.Net">
+ <HintPath>C:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Assets/ZigFu/Scripts/_Internal/OpenNI.Net.dll</HintPath>
  </Reference>
  <Reference Include="ZDK">
  <HintPath>C:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Assets/ZigFu/Scripts/_Internal/ZDK.dll</HintPath>
  </Reference>
- <Reference Include="OpenNI.Net">
- <HintPath>C:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Assets/ZigFu/Scripts/_Internal/OpenNI.Net.dll</HintPath>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

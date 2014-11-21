@@ -46,11 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ReceiveKinectData.cs" />
      <Compile Include="Assets\Scripts\AsteroidField.cs" />
      <Compile Include="Assets\Scripts\AsteroidScript.cs" />
      <Compile Include="Assets\Scripts\CannonControl.cs" />
      <Compile Include="Assets\Scripts\GUIResize.cs" />
+     <Compile Include="Assets\Scripts\ReceiveKinectData.cs" />
      <Compile Include="Assets\Scripts\ShipMovement.cs" />
      <Compile Include="Assets\ZigFu\SampleScenes\_Data\Scripts\ExitOnEscape.cs" />
      <Compile Include="Assets\ZigFu\SampleScenes\_Data\Scripts\HSBColor.cs" />
@@ -85,11 +85,11 @@
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
- <Reference Include="ZDK">
- <HintPath>C:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Assets/ZigFu/Scripts/_Internal/ZDK.dll</HintPath>
- </Reference>
  <Reference Include="OpenNI.Net">
  <HintPath>C:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Assets/ZigFu/Scripts/_Internal/OpenNI.Net.dll</HintPath>
+ </Reference>
+ <Reference Include="ZDK">
+ <HintPath>C:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Assets/ZigFu/Scripts/_Internal/ZDK.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

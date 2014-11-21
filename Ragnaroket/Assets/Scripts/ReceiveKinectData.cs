@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class ReceiveKinectData : MonoBehaviour {
+
 	public ZigSkeleton vikingSkele, girlSkele;
-	public ZigEngageSingleUser userEngage;
 	public ShipMovement ship;
 
 	//accel stuff
@@ -13,6 +13,14 @@ public class ReceiveKinectData : MonoBehaviour {
 	//steer stuff
 	public float steerZ;
 	public float steerX;
+
+	//aim & shoot stuff
+	public CannonControl cannonScript;
+	public bool canShoot;
+	public float shootThreshhold;
+	public Texture2D[] crosshairs;
+	public GUITexture crossSprite;
+	
 
 	// Use this for initialization
 	void Start () {
@@ -42,10 +50,34 @@ public class ReceiveKinectData : MonoBehaviour {
 			//will later swap out for player 2
 			if (!ship.accelerating)
 			{
-				steerX = vikingSkele.Torso.localRotation.x * 3;
-				steerZ = vikingSkele.Torso.localRotation.z * 3;
+				steerX = girlSkele.Torso.localRotation.x * 3;
+				steerZ = girlSkele.Torso.localRotation.z * 3;
 				ship.turnX = steerX;
 				ship.turnZ = steerZ;
+			}
+		}
+		if (!cannonScript.DebugControl)
+		{
+			//Aiming Control
+			cannonScript.crosshair.position = Vector2.Lerp(cannonScript.crosshair.position, vikingSkele.RightHand.localPosition * 2, 0.1f);
+
+			//Shooting Control
+			if (Vector3.Distance(girlSkele.LeftHand.position, vikingSkele.RightHand.position) < shootThreshhold	& canShoot)
+			{
+				canShoot = false;
+				crossSprite.texture = crosshairs[1];
+				cannonScript.Fire();
+			}
+			if (Vector3.Distance(girlSkele.LeftHand.position, vikingSkele.RightHand.position) >= shootThreshhold & !canShoot)
+			{
+				canShoot = true;
+				crossSprite.texture = crosshairs[0];
+			}
+
+			//debug
+			if (Input.GetKeyDown(KeyCode.O))
+			{
+				print(Vector3.Distance(girlSkele.LeftHand.position, vikingSkele.RightHand.position));
 			}
 		}
 	}
