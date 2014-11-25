@@ -5,6 +5,7 @@ public class CannonControl : MonoBehaviour {
 	public bool DebugControl;
 
 	public ParticleSystem[] laser;
+	public Transform[] spotlights;
 	public Transform crosshair;
 
 	public Vector2 toCam;
@@ -32,6 +33,9 @@ public class CannonControl : MonoBehaviour {
 		Ray ray = Camera.main.ScreenPointToRay(new Vector3 (crosshair.position.x * Screen.width, crosshair.position.y * Screen.height, 100));
 		laser[0].transform.LookAt(ray.GetPoint(100));
 		laser[1].transform.LookAt(ray.GetPoint(100));
+		spotlights[0].LookAt(ray.GetPoint(100));
+		spotlights[1].LookAt(ray.GetPoint(100));
+
 
 		//show reload text
 		if (AmmoCurrent > 0)

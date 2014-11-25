@@ -24,6 +24,8 @@ public class AsteroidField : MonoBehaviour {
 					newAsteroid.rigidbody.AddForce(new Vector3(Random.Range(-asteroidForce, asteroidForce), Random.Range(-asteroidForce, asteroidForce), Random.Range(-asteroidForce, asteroidForce)));
 					newAsteroid.rigidbody.angularVelocity = Random.insideUnitSphere/asteroidForce;
 					newAsteroid.transform.parent = transform;
+					newAsteroid.transform.localScale = new Vector3 (Random.Range (0.7f, 1.5f), Random.Range (0.7f, 1.5f), Random.Range (0.7f, 1.5f));
+					newAsteroid.transform.rotation = Quaternion.Euler (Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360));
 				}
 			}
 		}
