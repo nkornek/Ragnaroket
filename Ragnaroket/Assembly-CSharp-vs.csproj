@@ -50,8 +50,11 @@
      <Compile Include="Assets\Scripts\AsteroidScript.cs" />
      <Compile Include="Assets\Scripts\CannonControl.cs" />
      <Compile Include="Assets\Scripts\GUIResize.cs" />
+     <Compile Include="Assets\Scripts\HandCollision.cs" />
      <Compile Include="Assets\Scripts\ReceiveKinectData.cs" />
+     <Compile Include="Assets\Scripts\ShipDemo.cs" />
      <Compile Include="Assets\Scripts\ShipMovement.cs" />
+     <Compile Include="Assets\Scripts\WolfAI.cs" />
      <Compile Include="Assets\ZigFu\SampleScenes\_Data\Scripts\ExitOnEscape.cs" />
      <Compile Include="Assets\ZigFu\SampleScenes\_Data\Scripts\HSBColor.cs" />
      <Compile Include="Assets\ZigFu\SampleScenes\_Data\Scripts\MenuController.cs" />

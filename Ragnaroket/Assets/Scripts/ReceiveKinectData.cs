@@ -32,7 +32,7 @@ public class ReceiveKinectData : MonoBehaviour {
 		if (!ship.debugControls)
 		{
 			//throttle control
-			kneeUp = (vikingSkele.LeftHip.localPosition.y - vikingSkele.LeftKnee.localPosition.y <= threshholdKneeLift 
+			kneeUp = (Mathf.Abs(vikingSkele.LeftHip.localPosition.y - vikingSkele.LeftKnee.localPosition.y) <= threshholdKneeLift 
 							& vikingSkele.LeftHip.localPosition.x - vikingSkele.LeftKnee.localPosition.x >= threshholdKneeSide);
 
 			footOut = (kneeUp & vikingSkele.LeftFoot.localPosition.x - vikingSkele.LeftKnee.localPosition.x <= threshholdFootOut);
@@ -60,7 +60,7 @@ public class ReceiveKinectData : MonoBehaviour {
 		{
 			//Aiming Control
 			cannonScript.crosshair.position = Vector2.Lerp(cannonScript.crosshair.position, vikingSkele.RightHand.localPosition * 2, 0.1f);
-
+			/*
 			//Shooting Control
 			if (Vector3.Distance(girlSkele.LeftHand.position, vikingSkele.RightHand.position) < shootThreshhold	& canShoot)
 			{
@@ -73,6 +73,7 @@ public class ReceiveKinectData : MonoBehaviour {
 				canShoot = true;
 				crossSprite.texture = crosshairs[0];
 			}
+			*/
 
 			//debug
 			if (Input.GetKeyDown(KeyCode.O))
