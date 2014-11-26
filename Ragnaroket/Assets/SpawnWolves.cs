@@ -20,4 +20,6 @@ public class SpawnWolves : MonoBehaviour {
 		Instantiate(wolf, playerShip.position + spawnPos, Quaternion.identity);
 	}
 
+
+
 }
