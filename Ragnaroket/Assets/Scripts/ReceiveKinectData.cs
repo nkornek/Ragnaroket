@@ -60,20 +60,6 @@ public class ReceiveKinectData : MonoBehaviour {
 		{
 			//Aiming Control
 			cannonScript.crosshair.position = Vector2.Lerp(cannonScript.crosshair.position, vikingSkele.RightHand.localPosition * 2, 0.1f);
-			/*
-			//Shooting Control
-			if (Vector3.Distance(girlSkele.LeftHand.position, vikingSkele.RightHand.position) < shootThreshhold	& canShoot)
-			{
-				canShoot = false;
-				crossSprite.texture = crosshairs[1];
-				cannonScript.Fire();
-			}
-			if (Vector3.Distance(girlSkele.LeftHand.position, vikingSkele.RightHand.position) >= shootThreshhold & !canShoot)
-			{
-				canShoot = true;
-				crossSprite.texture = crosshairs[0];
-			}
-			*/
 
 			//debug
 			if (Input.GetKeyDown(KeyCode.O))
