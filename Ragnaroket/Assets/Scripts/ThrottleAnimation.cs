@@ -16,7 +16,7 @@ public class ThrottleAnimation : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (shipScript.accelerating)
+		if (shipScript.speedMult >= 0.2f)
 		{
 			otherViking[0].enabled = false;
 			otherViking[1].enabled = false;

@@ -19,6 +19,10 @@ public class ShipMovement : MonoBehaviour {
 		{
 			if (Input.GetKey(KeyCode.Space))
 			{
+				if (speedMult < 0.2f)
+				{
+					speedMult = 0.2f;
+				}
 				speedMult = Mathf.Lerp(speedMult, 0.45f, 0.1f);
 				accelerating = true;
 			}
@@ -76,6 +80,10 @@ public class ShipMovement : MonoBehaviour {
 			turnX = Mathf.Lerp (turnX, 0, 0.1f);
 			turnZ = Mathf.Lerp (turnZ, 0, 0.1f);
 			rigidbody.AddRelativeForce(Vector3.forward * shipAccelSpeed * speedMult * Time.deltaTime);
+		}
+		else
+		{
+			speedMult = Mathf.Lerp(speedMult, 0, 0.1f);
 		}
 		//set rotation
 		transform.Rotate(new Vector3(turnX * turnspeed * Time.deltaTime, 0, turnZ * turnspeed * Time.deltaTime));
