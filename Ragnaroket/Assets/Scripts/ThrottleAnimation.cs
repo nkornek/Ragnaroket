@@ -22,9 +22,9 @@ public class ThrottleAnimation : MonoBehaviour {
 			otherViking[1].enabled = false;
 			gameObject.GetComponent<Image>().enabled = true;
 			int whichSprite;
-			if (shipScript.speedMult <= 0.44)
+			if (shipScript.speedMult <= 0.44f)
 			{
-				whichSprite = (shipScript.speedMult - 0.2) * 50;
+				whichSprite = Mathf.FloorToInt((shipScript.speedMult - 0.2f) * 50);
 			}
 			else
 			{
