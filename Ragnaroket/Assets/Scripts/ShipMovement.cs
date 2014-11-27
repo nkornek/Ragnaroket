@@ -19,7 +19,7 @@ public class ShipMovement : MonoBehaviour {
 		{
 			if (Input.GetKey(KeyCode.Space))
 			{
-				speedMult = 1;
+				speedMult = Mathf.Lerp(speedMult, 0.45, 0.1f);
 				accelerating = true;
 			}
 			else
