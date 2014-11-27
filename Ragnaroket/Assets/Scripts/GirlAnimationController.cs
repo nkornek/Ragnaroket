@@ -8,7 +8,7 @@ public class GirlAnimationController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//forward
-		if (shipSteering.turnX > 0.1f)
+		if (shipSteering.turnX > 0.2f)
 		{
 			gameObject.GetComponent<Animator>().SetBool("Forward", true);
 		}
@@ -17,7 +17,7 @@ public class GirlAnimationController : MonoBehaviour {
 			gameObject.GetComponent<Animator>().SetBool("Forward", false);
 		}
 		//backward
-		if (shipSteering.turnX < -0.1f)
+		if (shipSteering.turnX < -0.2f)
 		{
 			gameObject.GetComponent<Animator>().SetBool("Backward", true);
 		}
@@ -26,7 +26,7 @@ public class GirlAnimationController : MonoBehaviour {
 			gameObject.GetComponent<Animator>().SetBool("Backward", false);
 		}
 		//left
-		if (shipSteering.turnZ > 0.1f)
+		if (shipSteering.turnZ > 0.2f)
 		{
 			gameObject.GetComponent<Animator>().SetBool("Left", true);
 		}
@@ -35,7 +35,7 @@ public class GirlAnimationController : MonoBehaviour {
 			gameObject.GetComponent<Animator>().SetBool("Left", false);
 		}
 		//right
-		if (shipSteering.turnZ < -0.1f)
+		if (shipSteering.turnZ < -0.2f)
 		{
 			gameObject.GetComponent<Animator>().SetBool("Right", true);
 		}

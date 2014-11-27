@@ -42,8 +42,7 @@ public class ReceiveKinectData : MonoBehaviour {
 			{
 				float footDist = vikingSkele.LeftFoot.localPosition.x - vikingSkele.LeftKnee.localPosition.x;
 				footDist = Mathf.Abs(footDist);
-				ship.speedMult = footDist;
-				print ("footdist" + footDist);
+				ship.speedMult = Mathf.Lerp(ship.speedMult, footDist, 0.1f);
 			}
 
 
