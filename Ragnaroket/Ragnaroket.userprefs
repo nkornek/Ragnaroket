@@ -1,13 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ShipMovement.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ArrowScript.cs">
     <Files>
-      <File FileName="Assets\Scripts\ThrottleAnimation.cs" Line="18" Column="3" />
+      <File FileName="Assets\Scripts\ThrottleAnimation.cs" Line="18" Column="1" />
       <File FileName="Assets\Scripts\WolfAI.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\AsteroidField.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ShipMovement.cs" Line="73" Column="21" />
-      <File FileName="Assets\Scripts\ReceiveKinectData.cs" Line="55" Column="13" />
-      <File FileName="Assets\Scripts\GirlAnimationController.cs" Line="38" Column="34" />
+      <File FileName="Assets\Scripts\ReceiveKinectData.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GirlAnimationController.cs" Line="1" Column="1" />
+      <File FileName="Assets\ArrowScript.cs" Line="20" Column="20" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

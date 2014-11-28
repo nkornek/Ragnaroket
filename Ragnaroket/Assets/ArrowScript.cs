@@ -13,11 +13,11 @@ public class ArrowScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		Quaternion oldRot = transform.rotation;
+		//Quaternion oldRot = transform.rotation;
 		transform.LookAt (Objective);
-		Quaternion newRot = transform.rotation;
-		transform.rotation = Quaternion.Lerp (oldRot, newRot, 0.1f);
-		transform.rotation = Quaternion.Euler (transform.rotation.x + offset, transform.rotation.y, transform.rotation.z);
+		//Quaternion newRot = transform.rotation;
+		//transform.rotation = Quaternion.Lerp (oldRot, newRot, 0.1f);
+		//transform.rotation = Quaternion.Euler (transform.rotation.x + offset, transform.rotation.y, transform.rotation.z);
 	
 	}
 }
