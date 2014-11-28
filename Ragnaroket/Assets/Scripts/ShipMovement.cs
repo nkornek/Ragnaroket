@@ -89,4 +89,9 @@ public class ShipMovement : MonoBehaviour {
 		transform.Rotate(new Vector3(turnX * turnspeed * Time.deltaTime, 0, turnZ * turnspeed * Time.deltaTime));
 
 	}
+
+	void OnCollisionEnter (Collision coll) 
+	{
+		gameObject.GetComponent<AudioSource> ().Play ();
+	}
 }

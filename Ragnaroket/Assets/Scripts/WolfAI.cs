@@ -12,6 +12,7 @@ public class WolfAI : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		playerShip = GameObject.FindWithTag ("Player").transform;
+		GameObject.Find ("Music Controller").GetComponent<ControlMusic> ().wolf = gameObject;
 	}
 	
 	// Update is called once per frame
@@ -45,15 +46,22 @@ public class WolfAI : MonoBehaviour {
 		}
 	}
 
-	void OnParticleCollision(GameObject other) 
+	void OnCollisionEnter (Collision coll) 
 	{
-		if (!stunned & !invuln)
+		if (coll.transform.tag == "Laser")
 		{
-			stunned = true;
-			Invoke ("UnStun", stunTime);
-			//apply force
-			rigidbody.AddRelativeForce(Vector3.Normalize(transform.position - playerShip.position) * knockBack * Time.deltaTime);
-			rigidbody.angularVelocity = Random.insideUnitSphere * knockBack;
+			if (!stunned & !invuln)
+			{
+				stunned = true;
+				Invoke ("UnStun", stunTime);
+				//apply force
+				rigidbody.AddRelativeForce(Vector3.Normalize(transform.position - playerShip.position) * knockBack * Time.deltaTime);
+				rigidbody.angularVelocity = Random.insideUnitSphere * knockBack;
+			}
+		}
+		if (coll.transform.tag == "Player")
+		{
+			coll.rigidbody.AddRelativeForce(Vector3.Normalize(playerShip.position - transform.position) * knockBack * Time.deltaTime);
 		}
 	}
 
