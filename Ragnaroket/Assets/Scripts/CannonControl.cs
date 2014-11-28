@@ -4,9 +4,10 @@ using System.Collections;
 public class CannonControl : MonoBehaviour {
 	public bool DebugControl;
 
-	public ParticleSystem[] laser;
-	public Transform[] spotlights;
+	public Transform[] spotlights, cannons;
 	public Transform crosshair;
+
+	public GameObject laserFire;
 
 	public Vector2 toCam;
 
@@ -31,8 +32,8 @@ public class CannonControl : MonoBehaviour {
 		}
 		//Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		Ray ray = Camera.main.ScreenPointToRay(new Vector3 (crosshair.position.x * Screen.width, crosshair.position.y * Screen.height, 100));
-		laser[0].transform.LookAt(ray.GetPoint(100));
-		laser[1].transform.LookAt(ray.GetPoint(100));
+		cannons [0].LookAt (ray.GetPoint (100));
+		cannons [1].LookAt (ray.GetPoint (100));
 		spotlights[0].LookAt(ray.GetPoint(100));
 		spotlights[1].LookAt(ray.GetPoint(100));
 
@@ -63,8 +64,9 @@ public class CannonControl : MonoBehaviour {
 		}
 		else if (AmmoCurrent > 0)
 		{
-			laser[0].Emit(1);
-			laser[1].Emit(1);
+			gameObject.GetComponent<AudioSource>().Play ();
+			Instantiate(laserFire, cannons[0].position, cannons[0].rotation);
+			Instantiate(laserFire, cannons[1].position, cannons[1].rotation);
 			AmmoCurrent --;
 		}
 	}

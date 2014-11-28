@@ -46,16 +46,19 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ArrowScript.cs" />
      <Compile Include="Assets\ParticleLights\Code\Extra\ParticleSelector.cs" />
      <Compile Include="Assets\ParticleLights\Code\ParticleLights.cs" />
      <Compile Include="Assets\ParticleLights\Code\ParticleLightsManager.cs" />
+     <Compile Include="Assets\Scripts\ArrowScript.cs" />
      <Compile Include="Assets\Scripts\AsteroidField.cs" />
      <Compile Include="Assets\Scripts\AsteroidScript.cs" />
      <Compile Include="Assets\Scripts\CannonControl.cs" />
+     <Compile Include="Assets\Scripts\ControlMusic.cs" />
      <Compile Include="Assets\Scripts\GUIResize.cs" />
+     <Compile Include="Assets\Scripts\GhostFacer.cs" />
      <Compile Include="Assets\Scripts\GirlAnimationController.cs" />
      <Compile Include="Assets\Scripts\HandCollision.cs" />
+     <Compile Include="Assets\Scripts\LaserScript.cs" />
      <Compile Include="Assets\Scripts\ReceiveKinectData.cs" />
      <Compile Include="Assets\Scripts\ShipDemo.cs" />
      <Compile Include="Assets\Scripts\ShipMovement.cs" />
