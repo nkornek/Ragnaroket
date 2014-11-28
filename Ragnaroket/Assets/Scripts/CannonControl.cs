@@ -15,6 +15,8 @@ public class CannonControl : MonoBehaviour {
 
 	public GUITexture reloadText;
 
+	public float focusTime, currentFocus, focusRange;
+
 	void Start() {
 		Reload ();
 	}
@@ -31,11 +33,30 @@ public class CannonControl : MonoBehaviour {
 			}
 		}
 		//Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		RaycastHit hit;
 		Ray ray = Camera.main.ScreenPointToRay(new Vector3 (crosshair.position.x * Screen.width, crosshair.position.y * Screen.height, 100));
 		cannons [0].LookAt (ray.GetPoint (100));
 		cannons [1].LookAt (ray.GetPoint (100));
 		spotlights[0].LookAt(ray.GetPoint(100));
 		spotlights[1].LookAt(ray.GetPoint(100));
+
+		if (Physics.Raycast (ray, out hit)) 
+		{
+			if (hit.transform.tag == "Objective" & Vector3.Distance(hit.transform.position, gameObject.transform.position) <= focusRange)
+			{
+				currentFocus += Time.deltaTime;
+				if (currentFocus >= focusTime)
+				{
+					currentFocus = focusTime;
+					//put stuff to trigger spacevaettir;
+				}
+			}
+			else
+			{
+				currentFocus = Mathf.Lerp(currentFocus, 0, 0.2f);
+			}
+		}
+
 
 
 		//show reload text

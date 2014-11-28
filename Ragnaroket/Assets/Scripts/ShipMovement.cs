@@ -8,6 +8,8 @@ public class ShipMovement : MonoBehaviour {
 
 	public bool debugControls;
 
+	public AudioSource rocketBooster;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -80,10 +82,12 @@ public class ShipMovement : MonoBehaviour {
 			turnX = Mathf.Lerp (turnX, 0, 0.1f);
 			turnZ = Mathf.Lerp (turnZ, 0, 0.1f);
 			rigidbody.AddRelativeForce(Vector3.forward * shipAccelSpeed * speedMult * Time.deltaTime);
+			rocketBooster.volume = Mathf.Lerp(rocketBooster.volume, 1, 0.2f);
 		}
 		else
 		{
 			speedMult = Mathf.Lerp(speedMult, 0, 0.1f);
+			rocketBooster.volume = Mathf.Lerp(rocketBooster.volume, 0, 0.2f);
 		}
 		//set rotation
 		transform.Rotate(new Vector3(turnX * turnspeed * Time.deltaTime, 0, turnZ * turnspeed * Time.deltaTime));

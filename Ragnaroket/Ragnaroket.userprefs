@@ -1,11 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ShipMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CannonControl.cs">
     <Files>
-      <File FileName="Assets\Scripts\CannonControl.cs" Line="63" Column="13" />
-      <File FileName="Assets\Scripts\AsteroidScript.cs" Line="10" Column="37" />
-      <File FileName="Assets\Scripts\WolfAI.cs" Line="15" Column="88" />
-      <File FileName="Assets\Scripts\ShipMovement.cs" Line="95" Column="3" />
+      <File FileName="Assets\ObjectiveList.cs" Line="7" Column="30" />
+      <File FileName="Assets\Scripts\ArrowScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\ObjectiveReached.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CannonControl.cs" Line="55" Column="5" />
+      <File FileName="Assets\LockOnIndicator.cs" Line="18" Column="77" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
