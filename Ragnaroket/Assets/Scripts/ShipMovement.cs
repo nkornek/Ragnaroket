@@ -10,6 +10,8 @@ public class ShipMovement : MonoBehaviour {
 
 	public AudioSource rocketBooster;
 
+	public Camera mainCam;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -83,11 +85,16 @@ public class ShipMovement : MonoBehaviour {
 			turnZ = Mathf.Lerp (turnZ, 0, 0.1f);
 			rigidbody.AddRelativeForce(Vector3.forward * shipAccelSpeed * speedMult * Time.deltaTime);
 			rocketBooster.volume = Mathf.Lerp(rocketBooster.volume, 1, 0.2f);
+			if (shipAccelSpeed * speedMult * Time.deltaTime > 60)
+			{
+				mainCam.fieldOfView = Mathf.Lerp(mainCam.fieldOfView, shipAccelSpeed * speedMult * Time.deltaTime, 0.1f);
+			}
 		}
 		else
 		{
 			speedMult = Mathf.Lerp(speedMult, 0, 0.1f);
 			rocketBooster.volume = Mathf.Lerp(rocketBooster.volume, 0, 0.2f);
+			mainCam.fieldOfView = Mathf.Lerp(mainCam.fieldOfView, 60, 0.1f);
 		}
 		//set rotation
 		transform.Rotate(new Vector3(turnX * turnspeed * Time.deltaTime, 0, turnZ * turnspeed * Time.deltaTime));

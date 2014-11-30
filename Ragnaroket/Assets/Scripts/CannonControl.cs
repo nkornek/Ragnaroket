@@ -40,6 +40,9 @@ public class CannonControl : MonoBehaviour {
 		spotlights[0].LookAt(ray.GetPoint(100));
 		spotlights[1].LookAt(ray.GetPoint(100));
 
+
+		//lock on
+		currentFocus -= Time.deltaTime / 4;
 		if (Physics.Raycast (ray, out hit)) 
 		{
 			if (hit.transform.tag == "Objective" & Vector3.Distance(hit.transform.position, gameObject.transform.position) <= focusRange)
@@ -50,10 +53,6 @@ public class CannonControl : MonoBehaviour {
 					currentFocus = focusTime;
 					//put stuff to trigger spacevaettir;
 				}
-			}
-			else
-			{
-				currentFocus = Mathf.Lerp(currentFocus, 0, 0.2f);
 			}
 		}
 
