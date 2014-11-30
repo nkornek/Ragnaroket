@@ -14,7 +14,7 @@ public class LockOnIndicator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		indicPos.position = Vector2.Lerp (indicPos.position, new Vector2 (cannonScript.crosshair.position.x * Screen.width, cannonScript.crosshair.position.y * Screen.height), 0.1f);
+		indicPos.position = Vector2.Lerp (indicPos.position, new Vector2 (cannonScript.crosshair.position.x * Screen.width, cannonScript.crosshair.position.y * Screen.height), 0.9f);
 		indicator.fillAmount = cannonScript.currentFocus / cannonScript.focusTime;
 	
 	}

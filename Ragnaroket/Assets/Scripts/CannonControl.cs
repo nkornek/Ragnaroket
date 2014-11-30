@@ -17,6 +17,8 @@ public class CannonControl : MonoBehaviour {
 
 	public float focusTime, currentFocus, focusRange;
 
+	public ObjectiveList objectives;
+
 	void Start() {
 		Reload ();
 	}
@@ -47,11 +49,15 @@ public class CannonControl : MonoBehaviour {
 		{
 			if (hit.transform.tag == "Objective" & Vector3.Distance(hit.transform.position, gameObject.transform.position) <= focusRange)
 			{
-				currentFocus += Time.deltaTime;
-				if (currentFocus >= focusTime)
+				if (!hit.transform.gameObject.GetComponent<ObjectiveReached>().triggered)
 				{
-					currentFocus = focusTime;
-					//put stuff to trigger spacevaettir;
+					currentFocus += Time.deltaTime;
+					if (currentFocus >= focusTime)
+					{
+						currentFocus = 0;
+						objectives.objectiveList[objectives.currentObjective].GetComponent<ObjectiveReached>().trigger();
+						objectives.NewObjective();
+					}
 				}
 			}
 		}

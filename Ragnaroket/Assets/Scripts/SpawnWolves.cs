@@ -9,6 +9,7 @@ public class SpawnWolves : MonoBehaviour {
 	public float maxTimeToSpawn, timeToSpawn, variant;
 
 	public bool debug;
+	public ObjectiveList objectives;
 
 	void Start ()
 	{
@@ -16,7 +17,7 @@ public class SpawnWolves : MonoBehaviour {
 	}
 
 	bool canSpawn() {
-		if (GameObject.FindGameObjectWithTag("Enemy") == null)
+		if (GameObject.FindGameObjectWithTag("Enemy") == null & objectives.currentObjective > 1)
 		{
 			return true;
 		}
@@ -43,12 +44,10 @@ public class SpawnWolves : MonoBehaviour {
 		}
 	}
 
-	void SpawnWolf()
+	public void SpawnWolf()
 	{
 		Vector3 spawnPos = Random.onUnitSphere * spawnDistance;
 		Instantiate(wolf, playerShip.position + spawnPos, Quaternion.identity);
 	}
-
-
 
 }

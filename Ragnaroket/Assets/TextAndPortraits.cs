@@ -18,7 +18,9 @@ public class TextAndPortraits : MonoBehaviour {
 	public bool textVisible;
 	public Image showPortrait, border;
 	public Text UItext;
-	int whichText;
+	public int whichText;
+
+	public MeshRenderer arrow;
 
 
 	// Use this for initialization
@@ -30,14 +32,20 @@ public class TextAndPortraits : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.I))
+		if (textVisible)
 		{
-			ShowText ();
+			arrow.enabled = false;
 		}
+		else
+		{
+			arrow.enabled = true;
+		}
+
 	}
 
 	public void ShowText ()
 	{
+		textVisible = true;
 		showPortrait.enabled = true;
 		UItext.enabled = true;
 		border.enabled = true;
@@ -61,6 +69,7 @@ public class TextAndPortraits : MonoBehaviour {
 
 	public void HideText ()
 	{
+		textVisible = false;
 		showPortrait.enabled = false;
 		UItext.enabled = false;
 		border.enabled = false;

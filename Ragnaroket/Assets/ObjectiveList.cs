@@ -7,6 +7,11 @@ public class ObjectiveList : MonoBehaviour {
 	public int currentObjective;
 	public ArrowScript arrow;
 
+	void Start()
+	{
+		objectiveList [currentObjective].GetComponent<ObjectiveReached> ().ShowObjective ();
+	}
+
 	public void NewObjective()
 	{
 		if (currentObjective < objectiveList.Length)
