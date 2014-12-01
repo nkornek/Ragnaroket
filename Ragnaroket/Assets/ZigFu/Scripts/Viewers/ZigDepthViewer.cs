@@ -142,6 +142,7 @@ public class ZigDepthViewer : MonoBehaviour {
 
     void OnGUI() {
         if (null == target) {
+			GUI.depth = -10000000;
 			GUI.DrawTexture(new Rect(10, Screen.height - texture.height - 10, texture.width, texture.height), texture);
 
 			//GUI.DrawTexture(new Rect(Screen.width - texture.width - 10, Screen.height - texture.height - 10, texture.width, texture.height), texture);

@@ -61,6 +61,13 @@ public class ReceiveKinectData : MonoBehaviour {
 			//Aiming Control
 			cannonScript.crosshair.position = Vector2.Lerp(cannonScript.crosshair.position, vikingSkele.RightHand.localPosition * 2, 0.1f);
 
+
+			//new kinect position stuff
+			/*
+			 * make script look for distance less than a threshhold 0.45?
+			 * check if hand is approaching using a positionold and position new
+			 */
+
 			//debug
 			if (Input.GetKeyDown(KeyCode.O))
 			{
