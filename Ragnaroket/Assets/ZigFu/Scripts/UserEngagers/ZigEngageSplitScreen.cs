@@ -11,7 +11,7 @@ public class ZigEngageSplitScreen : MonoBehaviour {
     Bounds leftRegion = new Bounds(new Vector3(-500, 0, -3000), new Vector3(1000, 3000, 2000));
     Bounds rightRegion = new Bounds(new Vector3(500, 0, -3000), new Vector3(1000, 3000, 2000));
 
-    bool AllUsersEngaged { get { return null != leftTrackedUser && null != rightTrackedUser; } }
+    public bool AllUsersEngaged { get { return null != leftTrackedUser && null != rightTrackedUser; } }
 
     ZigTrackedUser LookForTrackedUserInRegion(ZigInput zig, Bounds region) {
         foreach (ZigTrackedUser trackedUser in zig.TrackedUsers.Values) {
