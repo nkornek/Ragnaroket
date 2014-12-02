@@ -17,7 +17,7 @@ public class ReceiveKinectData : MonoBehaviour {
 	//aim & shoot stuff
 	public CannonControl cannonScript;
 	public bool canShoot;
-	public float shootThreshhold;
+	public float shootThreshhold, armthreshhold;
 	public Texture2D[] crosshairs;
 	public GUITexture crossSprite;
 
@@ -36,14 +36,14 @@ public class ReceiveKinectData : MonoBehaviour {
 		{
 			//throttle control
 			kneeUp = (Mathf.Abs(vikingSkele.LeftHip.localPosition.y - vikingSkele.LeftKnee.localPosition.y) <= threshholdKneeLift 
-							& vikingSkele.LeftHip.localPosition.x - vikingSkele.LeftKnee.localPosition.x >= threshholdKneeSide);
+							& vikingSkele.LeftHip.localPosition.z - vikingSkele.LeftKnee.localPosition.z >= threshholdKneeSide);
 
-			footOut = (kneeUp & vikingSkele.LeftFoot.localPosition.x - vikingSkele.LeftKnee.localPosition.x <= threshholdFootOut);
+			footOut = (kneeUp & vikingSkele.LeftFoot.localPosition.z - vikingSkele.LeftKnee.localPosition.z <= threshholdFootOut);
 			ship.accelerating = footOut;
 
 			if (footOut)
 			{
-				float footDist = vikingSkele.LeftFoot.localPosition.x - vikingSkele.LeftKnee.localPosition.x;
+				float footDist = vikingSkele.LeftFoot.localPosition.z - vikingSkele.LeftKnee.localPosition.z;
 				footDist = Mathf.Abs(footDist);
 				ship.speedMult = Mathf.Lerp(ship.speedMult, footDist, 0.1f);
 			}
@@ -64,9 +64,9 @@ public class ReceiveKinectData : MonoBehaviour {
 			//Aiming Control
 			cannonScript.crosshair.position = Vector2.Lerp(cannonScript.crosshair.position, vikingSkele.RightHand.localPosition * 2, 0.1f);
 
-
 			//new kinect position stuff
-			if (Vector3.Distance(vikingSkele.RightHand.position, girlSkele.LeftHand.position) < shootThreshhold)
+			if (Vector3.Distance(vikingSkele.RightHand.position, girlSkele.LeftHand.position) < shootThreshhold
+			    & Vector3.Distance(vikingSkele.RightHand.position, vikingSkele.Torso.position) > armthreshhold)
 			{
 				if (canShoot & Vector3.Distance(vikingSkele.RightHand.position, girlSkele.LeftHand.position) < Vector3.Distance(vikingSkele.RightHand.position, oldPos))
 				{
@@ -79,18 +79,23 @@ public class ReceiveKinectData : MonoBehaviour {
 				canShoot = true;
 			}
 			oldPos = girlSkele.LeftHand.position;
+
 			/*
-			 * make script look for distance less than a threshhold 0.45?
-			 * check if hand is approaching using a positionold and position new
-			 */
-
-
-
 			//debug
 			if (Input.GetKeyDown(KeyCode.O))
 			{
 				print(Vector3.Distance(girlSkele.LeftHand.position, vikingSkele.RightHand.position));
 			}
+
+			if (Vector3.Distance(vikingSkele.RightHand.position, vikingSkele.Torso.position) > armthreshhold)
+			{
+				print ("ok");
+			}
+			if (Input.GetKey(KeyCode.U))
+			{
+				print (Vector3.Distance(vikingSkele.RightHand.position, vikingSkele.Torso.position));
+			}
+			*/
 		}
 	}
 }

@@ -46,11 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\FinalScene.cs" />
-     <Compile Include="Assets\KinectMenu.cs" />
-     <Compile Include="Assets\LockOnIndicator.cs" />
-     <Compile Include="Assets\ObjectiveList.cs" />
-     <Compile Include="Assets\ObjectiveReached.cs" />
      <Compile Include="Assets\ParticleLights\Code\Extra\ParticleSelector.cs" />
      <Compile Include="Assets\ParticleLights\Code\ParticleLights.cs" />
      <Compile Include="Assets\ParticleLights\Code\ParticleLightsManager.cs" />
@@ -59,18 +54,24 @@
      <Compile Include="Assets\Scripts\AsteroidScript.cs" />
      <Compile Include="Assets\Scripts\CannonControl.cs" />
      <Compile Include="Assets\Scripts\ControlMusic.cs" />
+     <Compile Include="Assets\Scripts\FinalScene.cs" />
      <Compile Include="Assets\Scripts\GUIResize.cs" />
      <Compile Include="Assets\Scripts\GhostFacer.cs" />
      <Compile Include="Assets\Scripts\GirlAnimationController.cs" />
      <Compile Include="Assets\Scripts\HandCollision.cs" />
+     <Compile Include="Assets\Scripts\KinectMenu.cs" />
      <Compile Include="Assets\Scripts\LaserScript.cs" />
+     <Compile Include="Assets\Scripts\LockOnIndicator.cs" />
+     <Compile Include="Assets\Scripts\ObjectiveList.cs" />
+     <Compile Include="Assets\Scripts\ObjectiveReached.cs" />
      <Compile Include="Assets\Scripts\ReceiveKinectData.cs" />
      <Compile Include="Assets\Scripts\ShipDemo.cs" />
      <Compile Include="Assets\Scripts\ShipMovement.cs" />
      <Compile Include="Assets\Scripts\SpawnWolves.cs" />
+     <Compile Include="Assets\Scripts\TextAndPortraits.cs" />
      <Compile Include="Assets\Scripts\ThrottleAnimation.cs" />
      <Compile Include="Assets\Scripts\WolfAI.cs" />
-     <Compile Include="Assets\TextAndPortraits.cs" />
+     <Compile Include="Assets\Scripts\fader.cs" />
      <Compile Include="Assets\ZigFu\SampleScenes\_Data\Scripts\ExitOnEscape.cs" />
      <Compile Include="Assets\ZigFu\SampleScenes\_Data\Scripts\HSBColor.cs" />
      <Compile Include="Assets\ZigFu\SampleScenes\_Data\Scripts\MenuController.cs" />
@@ -99,23 +100,22 @@
      <Compile Include="Assets\ZigFu\Scripts\_Internal\Matrix3.cs" />
      <Compile Include="Assets\ZigFu\Scripts\_Internal\TimedBuffer.cs" />
      <Compile Include="Assets\ZigFu\Scripts\_Internal\kinectSpecific.cs" />
-     <Compile Include="Assets\fader.cs" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>D:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>C:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="OpenNI.Net">
- <HintPath>D:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Assets/ZigFu/Scripts/_Internal/OpenNI.Net.dll</HintPath>
+ <HintPath>C:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Assets/ZigFu/Scripts/_Internal/OpenNI.Net.dll</HintPath>
  </Reference>
  <Reference Include="ZDK">
- <HintPath>D:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Assets/ZigFu/Scripts/_Internal/ZDK.dll</HintPath>
+ <HintPath>C:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Assets/ZigFu/Scripts/_Internal/ZDK.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

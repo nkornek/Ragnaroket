@@ -5,6 +5,8 @@ public class AsteroidScript : MonoBehaviour {
 	public int HP;
 	public ParticleSystem asteroidParts;
 
+	Vector3 linearVel, angularVel;
+
 	float clip;
 	Transform playerShip;
 
@@ -20,6 +22,18 @@ public class AsteroidScript : MonoBehaviour {
 		foreach (CapsuleCollider c in gameObject.GetComponentsInChildren<CapsuleCollider>())
 		{
 			c.enabled = showAsteroid();
+		}
+		if (!showAsteroid() & !rigidbody.IsSleeping())
+		{
+			linearVel = rigidbody.velocity;
+			angularVel = rigidbody.angularVelocity;
+			rigidbody.Sleep();
+		}
+		else if (showAsteroid() & rigidbody.IsSleeping())
+		{
+			rigidbody.WakeUp();
+			rigidbody.velocity = linearVel;
+			rigidbody.angularVelocity = angularVel;
 		}
 	}
 
