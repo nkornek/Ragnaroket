@@ -1,9 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ReceiveKinectData.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\TextAndPortraits.cs">
     <Files>
-      <File FileName="Assets\Scripts\ReceiveKinectData.cs" Line="61" Column="20" />
-      <File FileName="Assets\Scripts\HandCollision.cs" Line="1" Column="1" />
+      <File FileName="Assets\TextAndPortraits.cs" Line="73" Column="43" />
+      <File FileName="Assets\Scripts\CannonControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AsteroidScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\WolfAI.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SpawnWolves.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

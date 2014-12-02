@@ -11,7 +11,7 @@ public class AsteroidScript : MonoBehaviour {
 	void Start()
 	{
 		playerShip = GameObject.FindGameObjectWithTag ("Player").transform;
-		clip = GameObject.FindGameObjectWithTag ("Player").GetComponentInChildren<Camera> ().farClipPlane;
+		clip = GameObject.FindGameObjectWithTag ("Player").GetComponentInChildren<Camera> ().farClipPlane + 100;
 	}
 
 	void Update()
@@ -25,7 +25,7 @@ public class AsteroidScript : MonoBehaviour {
 
 	bool showAsteroid()
 	{
-		if (Vector3.Distance(playerShip.position, transform.position) > clip)
+		if (Vector3.Distance(playerShip.position, transform.position) > clip || HP <= 0)
 		{
 			return false;
 		}

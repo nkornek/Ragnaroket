@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\FinalScene.cs" />
      <Compile Include="Assets\KinectMenu.cs" />
      <Compile Include="Assets\LockOnIndicator.cs" />
      <Compile Include="Assets\ObjectiveList.cs" />
@@ -98,6 +99,7 @@
      <Compile Include="Assets\ZigFu\Scripts\_Internal\Matrix3.cs" />
      <Compile Include="Assets\ZigFu\Scripts\_Internal\TimedBuffer.cs" />
      <Compile Include="Assets\ZigFu\Scripts\_Internal\kinectSpecific.cs" />
+     <Compile Include="Assets\fader.cs" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
@@ -107,10 +109,10 @@
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="OpenNI.Net">
- <HintPath>C:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Assets/ZigFu/Scripts/_Internal/OpenNI.Net.dll</HintPath>
+ <HintPath>D:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Assets/ZigFu/Scripts/_Internal/OpenNI.Net.dll</HintPath>
  </Reference>
  <Reference Include="ZDK">
- <HintPath>C:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Assets/ZigFu/Scripts/_Internal/ZDK.dll</HintPath>
+ <HintPath>D:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Assets/ZigFu/Scripts/_Internal/ZDK.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

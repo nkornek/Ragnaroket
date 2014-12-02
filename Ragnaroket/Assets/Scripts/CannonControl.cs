@@ -33,7 +33,11 @@ public class CannonControl : MonoBehaviour {
 			{
 				Fire();
 			}
-		}
+		}		
+	}
+
+	void FixedUpdate ()
+	{
 		//Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit hit;
 		Ray ray = Camera.main.ScreenPointToRay(new Vector3 (crosshair.position.x * Screen.width, crosshair.position.y * Screen.height, 100));
@@ -41,10 +45,23 @@ public class CannonControl : MonoBehaviour {
 		cannons [1].LookAt (ray.GetPoint (100));
 		spotlights[0].LookAt(ray.GetPoint(100));
 		spotlights[1].LookAt(ray.GetPoint(100));
-
-
+		
+		//show reload text
+		if (AmmoCurrent > 0)
+		{
+			reloadText.enabled = false;
+		}
+		else
+		{
+			reloadText.enabled = true;
+		}
 		//lock on
 		currentFocus -= Time.deltaTime / 4;
+		if (currentFocus < 0)
+		{
+			currentFocus = 0;
+		}
+		
 		if (Physics.Raycast (ray, out hit)) 
 		{
 			if (hit.transform.tag == "Objective" & Vector3.Distance(hit.transform.position, gameObject.transform.position) <= focusRange)
@@ -61,19 +78,6 @@ public class CannonControl : MonoBehaviour {
 				}
 			}
 		}
-
-
-
-		//show reload text
-		if (AmmoCurrent > 0)
-		{
-			reloadText.enabled = false;
-		}
-		else
-		{
-			reloadText.enabled = true;
-		}
-		
 	}
 
 	void Reload ()

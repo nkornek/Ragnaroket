@@ -21,6 +21,8 @@ public class TextAndPortraits : MonoBehaviour {
 	public int whichText;
 
 	public MeshRenderer arrow;
+	public fader faderScript;
+	public Animator tutorial;
 
 
 	// Use this for initialization
@@ -64,6 +66,16 @@ public class TextAndPortraits : MonoBehaviour {
 		else
 		{
 			ShowText();
+		}
+		//tutorial
+		if (whichText == 6)
+		{
+			tutorial.SetTrigger("Show animations");
+		}
+		//end
+		if (whichText == 90)
+		{
+			faderScript.fadeIn = false;
 		}
 	}
 

@@ -11,13 +11,15 @@ public class SpawnWolves : MonoBehaviour {
 	public bool debug;
 	public ObjectiveList objectives;
 
+	public TextAndPortraits textStuff;
+
 	void Start ()
 	{
 		timeToSpawn = maxTimeToSpawn;
 	}
 
 	bool canSpawn() {
-		if (GameObject.FindGameObjectWithTag("Enemy") == null & objectives.currentObjective > 1)
+		if (GameObject.FindGameObjectWithTag("Enemy") == null & objectives.currentObjective > 1 & !textStuff.textVisible)
 		{
 			return true;
 		}

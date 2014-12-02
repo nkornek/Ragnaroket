@@ -20,10 +20,13 @@ public class ReceiveKinectData : MonoBehaviour {
 	public float shootThreshhold;
 	public Texture2D[] crosshairs;
 	public GUITexture crossSprite;
+
+	public Vector3 oldPos;
 	
 
 	// Use this for initialization
 	void Start () {
+		oldPos = girlSkele.LeftHand.position;
 	
 	}
 	
@@ -63,10 +66,25 @@ public class ReceiveKinectData : MonoBehaviour {
 
 
 			//new kinect position stuff
+			if (Vector3.Distance(vikingSkele.RightHand.position, girlSkele.LeftHand.position) < shootThreshhold)
+			{
+				if (canShoot & Vector3.Distance(vikingSkele.RightHand.position, girlSkele.LeftHand.position) < Vector3.Distance(vikingSkele.RightHand.position, oldPos))
+				{
+					cannonScript.Fire();
+					canShoot = false;
+				}
+			}
+			if (Vector3.Distance(vikingSkele.RightHand.position, girlSkele.LeftHand.position) > Vector3.Distance(vikingSkele.RightHand.position, oldPos))
+			{
+				canShoot = true;
+			}
+			oldPos = girlSkele.LeftHand.position;
 			/*
 			 * make script look for distance less than a threshhold 0.45?
 			 * check if hand is approaching using a positionold and position new
 			 */
+
+
 
 			//debug
 			if (Input.GetKeyDown(KeyCode.O))

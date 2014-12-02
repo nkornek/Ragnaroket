@@ -61,10 +61,10 @@
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/Editor/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="OpenNI.Net">
- <HintPath>C:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Assets/ZigFu/Scripts/_Internal/OpenNI.Net.dll</HintPath>
+ <HintPath>D:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Assets/ZigFu/Scripts/_Internal/OpenNI.Net.dll</HintPath>
  </Reference>
  <Reference Include="ZDK">
- <HintPath>C:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Assets/ZigFu/Scripts/_Internal/ZDK.dll</HintPath>
+ <HintPath>D:/Users/Nick/Documents/SourceTree/Ragnaroket/Ragnaroket/Assets/ZigFu/Scripts/_Internal/ZDK.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>

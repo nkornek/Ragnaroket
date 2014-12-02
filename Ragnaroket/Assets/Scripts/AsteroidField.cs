@@ -19,7 +19,7 @@ public class AsteroidField : MonoBehaviour {
 					float variationY = Random.Range(-variation, variation);
 					float variationZ = Random.Range(-variation, variation);
 					newAsteroid = Instantiate(Asteroid[Random.Range(0, Asteroid.Length)], 
-					                          new Vector3(x * spaceBetween + variationX, y * spaceBetween + variationY, z * spaceBetween + variationZ), 
+					                          new Vector3(transform.position.x + x * spaceBetween + variationX, transform.position.y + y * spaceBetween + variationY, transform.position.z + z * spaceBetween + variationZ), 
 					                          Quaternion.Euler(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360))) as GameObject;
 					newAsteroid.rigidbody.AddForce(new Vector3(Random.Range(-asteroidForce, asteroidForce), Random.Range(-asteroidForce, asteroidForce), Random.Range(-asteroidForce, asteroidForce)));
 					newAsteroid.rigidbody.angularVelocity = Random.insideUnitSphere/asteroidForce;
